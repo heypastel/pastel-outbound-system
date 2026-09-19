@@ -1,0 +1,17 @@
+{
+  "name": "pastel-outbound-system",
+  "owner": { "name": "Pastel", "url": "https://heypastel.com" },
+  "metadata": { "description": "Pastel Outbound System: an outbound team in 17 skills, powered by the Pastel MCP." },
+  "plugins": [
+    {
+      "name": "pastel-outbound",
+      "source": "./",
+      "description": "17 outbound skills + 14 agents powered by the Pastel MCP.",
+      "version": "1.0.0",
+      "author": { "name": "Pastel" },
+      "homepage": "https://heypastel.com",
+      "license": "MIT",
+      "category": "productivity"
+    }
+  ]
+}
