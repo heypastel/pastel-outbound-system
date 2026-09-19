@@ -1,0 +1,46 @@
+{
+  "name": "pastel-outbound",
+  "version": "1.0.0",
+  "description": "An outbound team in 20 skills for GPT-6 Astra: catch buyers showing intent on LinkedIn, check fit, find why now, write messages that sound human, warm people up, launch sequences, handle replies, and learn what works — powered by the Pastel MCP.",
+  "author": {
+    "name": "Pastel",
+    "url": "https://heypastel.com"
+  },
+  "homepage": "https://heypastel.com",
+  "repository": "https://github.com/heypastel/pastel-outbound-system",
+  "license": "MIT",
+  "keywords": [
+    "gpt-6-astra",
+    "codex",
+    "prospecting",
+    "linkedin",
+    "intent-signals",
+    "lead-generation",
+    "outbound",
+    "pastel",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "GPT-6 Astra Outbound System",
+    "shortDescription": "Your outbound team in 20 skills, powered by Pastel",
+    "longDescription": "Catch people showing buying intent on LinkedIn, check they fit, find the reason to reach out now, write messages that sound human, warm them up on their posts, launch sequences when you approve, handle replies, and learn which signals start conversations. Nothing is sent without your yes.",
+    "developerName": "Pastel",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://heypastel.com",
+    "defaultPrompt": [
+      "Run my morning brief.",
+      "Who showed buying signals this week? Pick the best 20 and write their messages."
+    ],
+    "privacyPolicyURL": "https://heypastel.com/privacy",
+    "termsOfServiceURL": "https://heypastel.com/terms",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "screenshots": [
+      "./assets/banner.png"
+    ]
+  }
+}

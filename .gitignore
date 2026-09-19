@@ -1,0 +1,5 @@
+.DS_Store
+/outbound-brief.md
+/outbound-*.md
+.env
+.env.*

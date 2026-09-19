@@ -1,0 +1,20 @@
+{
+  "name": "pastel-outbound-system",
+  "interface": {
+    "displayName": "GPT-6 Astra Outbound System"
+  },
+  "plugins": [
+    {
+      "name": "pastel-outbound",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
