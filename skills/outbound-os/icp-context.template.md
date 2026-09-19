@@ -1,6 +1,6 @@
 # icp-context.md
 
-The brief every outbound skill reads. Keep it in your project root (or `.agents/`, `.codex/`, `.claude/`). `icp-context-setup` drafts it from your Pastel workspace in a couple of minutes.
+The brief every outbound skill reads. Keep it in your project root (or `.agents/`, `.codex/`). `icp-context-setup` drafts it from your Pastel workspace in a couple of minutes.
 
 ## Offer
 

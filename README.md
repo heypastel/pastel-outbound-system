@@ -1,10 +1,8 @@
-# Pastel Outbound System
+# GPT-6 Astra Outbound System
 
 **Our complete outbound system, free. 17 skills covering almost every repetitive part of outbound.**
 
-Built for **GPT-6 Astra** in Codex and ChatGPT. It is plain markdown, so it also runs in Claude Code, Cursor, or any agent that reads skills — whichever model you use.
-
-Every skill runs on your live data through the **[Pastel](https://heypastel.com) MCP**: the leads Pastel's agents find from LinkedIn buying signals, your posts inbox, your LinkedIn conversations, and your sequences.
+Built for **GPT-6 Astra** in Codex. Every skill runs on your live data through the **[Pastel](https://heypastel.com) MCP**: the leads Pastel's agents find from LinkedIn buying signals, your posts inbox, your LinkedIn conversations, and your sequences.
 
 ## The 17 skills
 
@@ -28,7 +26,7 @@ Every skill runs on your live data through the **[Pastel](https://heypastel.com)
 | 16 | `pipeline-report` | Which buyer types, signals, and hooks turn into conversations |
 | 17 | `daily-brief` | Every morning: what came in, and the five actions worth doing today, drafted |
 
-Plus a **14-person team** of agents — Orchestrator, Strategist, Signal Scout, Fit Checker, Researcher, Reachability Checker, Scorer, Copywriter, Social Seller, Sequencer, Inbox Manager, Nurturer, Qualifier, Analyst — so hosts with subagents can research and write in parallel.
+Plus a **14-person team** of Codex custom agents — Orchestrator, Strategist, Signal Scout, Fit Checker, Researcher, Reachability Checker, Scorer, Copywriter, Social Seller, Sequencer, Inbox Manager, Nurturer, Qualifier, Analyst — so research and writing run in parallel.
 
 ## How the work flows
 
@@ -48,53 +46,39 @@ pipeline-report → back to target-accounts
 
 **Nothing reaches a prospect without your yes.** Review mode is the default. Autopilot is opt-in with a minimum score, and Pastel's pacing and daily caps still apply.
 
-## Install
+## Set it up in 3 steps
 
-### Codex (GPT-6 Astra)
+### 1. Create your Pastel workspace
+
+[Create a Pastel account](https://heypastel.com) and start your 7-day free trial. Add your website and connect the LinkedIn profile that will do the outreach.
+
+Pastel's agents then do a first run on your market, which takes **30–45 minutes**. Start here and install while it works — the system tells you if the first run is still going.
+
+### 2. Install it in Codex
 
 ```bash
 codex plugin marketplace add heypastel/pastel-outbound-system
+codex plugin add pastel-outbound@pastel-outbound-system
 ```
 
-Then install **Pastel Outbound System** from the plugin list and approve the Pastel connection when prompted.
+The Pastel connection comes with the plugin: Codex asks you to sign in to Pastel the first time a skill needs it. The system checks your Pastel permissions at the start of every session and tells you if sending isn't enabled yet.
 
-Optional — the 14 agents for parallel work:
+Optional — the 14 agents, for parallel research and writing:
 
 ```bash
-mkdir -p ~/.codex/agents && cp codex-agents/*.toml ~/.codex/agents/
+git clone https://github.com/heypastel/pastel-outbound-system.git
+mkdir -p ~/.codex/agents && cp pastel-outbound-system/agents/*.toml ~/.codex/agents/
 ```
 
-### ChatGPT
+### 3. Ask for your first results
 
-This is a standard OpenAI plugin, and ChatGPT Work mode runs those too. Or add `https://mcp.heypastel.com/mcp` as a connector and add the `skills/` folders.
+No commands to learn — just ask Codex:
 
-### Claude Code
+- *"Set up my ICP context."*
+- *"Who showed buying signals this week? Pick the best 25 and write their messages."*
+- *"Run my daily brief."* — every morning, five moves with drafts ready.
 
-```
-/plugin marketplace add heypastel/pastel-outbound-system
-/plugin install pastel-outbound@pastel-outbound-system
-```
-
-### Anything else (Cursor, other agents)
-
-Drop the `skills/` folder where your agent loads skills from, and add `https://mcp.heypastel.com/mcp` as an MCP server.
-
-## Connect Pastel
-
-1. Create a [Pastel](https://heypastel.com) workspace and add your website — Pastel learns your ICP from it.
-2. Link the LinkedIn profile that will do the outreach.
-3. Approve the MCP connection when your agent asks. To let the system **send** (not just draft), grant the `engage`, `sequences`, and `messages` scopes. The system checks your scopes at the start of every session and tells you what's missing.
-
-**New to Pastel?** Its agents do a first run on your market right after setup, which usually takes **30–45 minutes**. Leads appear when it's done. Use that time for step 1 below — the system will tell you if the first run is still going.
-
-Without Pastel, the skills still research and draft, but they have no leads, signals, inbox, or sending.
-
-## First five minutes
-
-1. *"Set up my ICP context."* → runs `icp-context-setup`.
-2. *"Show me what Pastel found this week — leads, posts, replies. Don't change anything."*
-3. *"Who showed buying signals this week? Pick the best 25, write their messages, and hold them for my review."*
-4. Every morning: *"Run my daily brief."* If your agent can schedule tasks, schedule it for weekdays at 8am.
+Without Pastel, the skills can still research and draft, but they have no leads, signals, inbox, or sending.
 
 ## Principles
 
@@ -102,5 +86,7 @@ Without Pastel, the skills still research and draft, but they have no leads, sig
 - **One job per skill.** Small, readable playbooks you can edit to fit your own motion.
 - **Signals over lists.** A title match is not intent. Every lead carries the signal that put it there.
 - **Just markdown.** No scripts to run; the only connection is the Pastel MCP.
+
+Stuck somewhere? [Ping me on LinkedIn](https://www.linkedin.com/in/loupaudouy/), I answer everyone.
 
 MIT licensed.

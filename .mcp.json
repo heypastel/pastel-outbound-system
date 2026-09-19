@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "pastel": {
-      "type": "http",
-      "url": "https://mcp.heypastel.com/mcp"
-    }
-  }
-}

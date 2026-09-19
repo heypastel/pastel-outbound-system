@@ -2,7 +2,7 @@
 
 ## Warm-up
 
-1. Look for `icp-context.md` in the project root, `.agents/`, `.codex/`, or `.claude/`. It is the brief: offer, buyers, no-go list, proof, voice, autopilot settings. No file → carry on, flag that the output is generic, and suggest `icp-context-setup`.
+1. Look for `icp-context.md` in the project root, `.agents/`, or `.codex/`. It is the brief: offer, buyers, no-go list, proof, voice, autopilot settings. No file → carry on, flag that the output is generic, and suggest `icp-context-setup`.
 2. With Pastel connected, call `pastel_list_capabilities` once per session to learn the granted scopes and which actions are live. Every Pastel call follows [`pastel-mcp.md`](pastel-mcp.md).
 
 ## Evidence

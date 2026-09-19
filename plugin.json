@@ -14,7 +14,7 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Pastel Outbound System",
+        "displayName": "GPT-6 Astra Outbound System",
         "shortDescription": "Your outbound team in 17 skills, powered by Pastel",
         "longDescription": "Find people showing buying intent on LinkedIn, filter them against your ICP, research one angle each, score them, write copy that doesn't sound like AI, warm them up on their posts, queue sequences, triage replies, and learn what converts. Nothing is sent without your review by default.",
         "developerName": "Pastel",

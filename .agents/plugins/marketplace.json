@@ -1,7 +1,7 @@
 {
   "name": "pastel-outbound-system",
   "interface": {
-    "displayName": "Pastel Outbound System"
+    "displayName": "GPT-6 Astra Outbound System"
   },
   "plugins": [
     {
