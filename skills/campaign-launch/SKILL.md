@@ -17,7 +17,7 @@ What was approved, for whom it was approved — nothing more — and a run id fo
 ## Steps
 
 1. **Can we send?** `pastel_list_capabilities`: `create_sequence` needs `sequences:write` and `engage:write`. `pastel_list_connected_accounts`: at least one account that can send. If either fails, halt and name the missing permission or account.
-2. **The right lead:** use the `lead_id` from the lead card. When the user names someone instead, find them with `pastel_query_leads(search=…)` and take the `id` of the matching item, then confirm it with `pastel_get_details`. If `get_details` lists the id under `not_found_ids`, the id is wrong, not the lead: search again. A lead is unreachable only when a record that *was* found has no LinkedIn profile.
+2. **The right lead:** use the `lead_id` from the lead card. When the user names someone instead, follow *Finding a named lead* in the Pastel tools guide — never an id from a name search — and confirm it with `pastel_get_details`. A lead is unreachable only when a record that *was* found has no LinkedIn profile.
 3. **Approved text only:** every invitation and message comes from `message-writer`, passed through `human-voice`. If the lead has no drafts yet, write them with those skills first and show them; never compose new copy inside the launch.
 4. **Current action ids:** `pastel_list_sequence_actions` for valid `action_id`, `condition_id`, and branching syntax — never assume them.
 5. **No doubles:** `pastel_list_sequence_runs(lead_id=…)`; skip anyone already running.

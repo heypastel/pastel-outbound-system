@@ -27,6 +27,15 @@ Server: `https://mcp.heypastel.com/mcp` (OAuth; the host handles auth). The serv
 | `pastel_query_leads` | Filtered lead search and paging (`countries`, `job_titles`, `industries`, `icp_definition_id`, `agent_id`, `created_since`, `status`) |
 | `pastel_leads_for_post` | Who reacted to or commented on one post. `no_leads_yet: true` is an answer, not an error |
 | `pastel_get_details` | Up to 5 leads or posts: profile, company, ICP match reasons, activity signals |
+
+**Lead ids: trust only ids from ranking or browsing.** `pastel_recommend_best_leads` and `pastel_query_leads` *without* `search` return real lead ids. With `search`, lead results can carry an id that no other tool accepts (the item has `snippet`/`keywords` and `status: null`, and `pastel_get_details` lists it under `not_found_ids`). To find a lead by name, use [Finding a named lead](#finding-a-named-lead) below. Post ids from search are fine.
+
+### Finding a named lead
+
+1. Reuse the `lead_id` already on a lead card from this session, if there is one.
+2. Otherwise browse: `pastel_query_leads` with **no** `search`, newest first, narrowing with `created_since`, `job_titles`, or `countries` when you know them, paging with `offset`; match the person by name and company in the results.
+3. Confirm with `pastel_get_details` before any action. An id in `not_found_ids` is a wrong id, not a missing person: go back to step 2.
+4. Not found after browsing the relevant window: say so, and ask the user for the profile URL or a narrower filter. Never act on an id that didn't resolve.
 | `pastel_aggregate_leads` | Counts grouped by `country`, `company_size`, `action`, `job_title`, `industry`, `company_type` |
 | `pastel_get_result_set_page` | Next page of a large result set |
 
