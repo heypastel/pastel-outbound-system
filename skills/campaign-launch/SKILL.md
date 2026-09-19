@@ -17,9 +17,11 @@ What was approved, for whom it was approved — nothing more — and a run id fo
 ## Steps
 
 1. **Can we send?** `pastel_list_capabilities`: `create_sequence` needs `sequences:write` and `engage:write`. `pastel_list_connected_accounts`: at least one account that can send. If either fails, halt and name the missing permission or account.
-2. **Current ids:** `pastel_list_sequence_actions` for valid `action_id`, `condition_id`, and branching syntax — never assume them.
-3. **No doubles:** `pastel_list_sequence_runs(lead_id=…)`; skip anyone already running.
-4. **Build the sequence:**
+2. **The right lead:** use the `lead_id` from the lead card. When the user names someone instead, find them with `pastel_query_leads(search=…)` and take the `id` of the matching item, then confirm it with `pastel_get_details`. If `get_details` lists the id under `not_found_ids`, the id is wrong, not the lead: search again. A lead is unreachable only when a record that *was* found has no LinkedIn profile.
+3. **Approved text only:** every invitation and message comes from `message-writer`, passed through `human-voice`. If the lead has no drafts yet, write them with those skills first and show them; never compose new copy inside the launch.
+4. **Current action ids:** `pastel_list_sequence_actions` for valid `action_id`, `condition_id`, and branching syntax — never assume them.
+5. **No doubles:** `pastel_list_sequence_runs(lead_id=…)`; skip anyone already running.
+6. **Build the sequence:**
 
    | Route (from `reach-check`) | Steps |
    |---|---|
@@ -28,8 +30,8 @@ What was approved, for whom it was approved — nothing more — and a run id fo
    | `lemlist` | the LinkedIn steps above, plus `push_to_lemlist` with the campaign from `outbound-brief.md` |
 
    No follow-up is written in advance: if there's no answer, `nudge` writes the next touch from the real conversation.
-5. **Request** `create_sequence` through `pastel_request_action`, one `idempotency_key` per lead (lead id + today's date), and complete the confirmation step if Pastel asks for one.
-6. **Check** each run with `pastel_get_sequence_run` and report its id. Status is _scheduled_ — Pastel spaces the steps within daily limits and working hours. `bypass_daily_limit` stays off.
+7. **Request** `create_sequence` through `pastel_request_action`, one `idempotency_key` per lead (lead id + today's date), and complete the confirmation step if Pastel asks for one.
+8. **Check** each run with `pastel_get_sequence_run` and report its id. Status is _scheduled_ — Pastel spaces the steps within daily limits and working hours. `bypass_daily_limit` stays off.
 
 ## Output
 

@@ -13,7 +13,7 @@ Write from the **why now** sentence and the proof in the lead card, in the voice
 
 | Draft | Length | Job |
 |---|---|---|
-| **Invitation note** | ≤ 180 characters, counted | Get the connection accepted. The why-now point and a light question. No pitch. |
+| **Invitation note** | ≤ 180 characters, counted | Get the connection accepted. The why-now point and a light question. No pitch, and no product or company name of ours. |
 | **Opening message** | ≤ 50 words | Sent once connected: the why-now point, what it means for them, one question they can answer in a line. |
 | **Variant B** | same limits | Same facts, different entry point, so the user can pick or A/B test. |
 
