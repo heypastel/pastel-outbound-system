@@ -34,6 +34,13 @@
     "defaultPrompt": [
       "Run my daily outbound brief.",
       "Find 25 people who match my ICP and showed buying intent this week. Don't contact anyone yet."
+    ],
+    "privacyPolicyURL": "https://heypastel.com/privacy",
+    "termsOfServiceURL": "https://heypastel.com/terms",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "screenshots": [
+      "./assets/banner.png"
     ]
   }
 }
