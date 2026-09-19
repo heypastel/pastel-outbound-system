@@ -93,4 +93,4 @@ Engagement and sequence steps run through Pastel's sequence engine: per-account 
 
 1. Batch reads: one `pastel_query_leads` with filters, then `pastel_get_details` in groups of 5.
 2. After a write, confirm with the matching read (`pastel_get_action_record`, `pastel_get_sequence_run`, the lead) and report ids.
-3. After an authentication error, make no more Pastel requests this run and ask the user to reconnect Pastel.
+3. After an authentication error, make no more Pastel requests this run and ask the user to run `codex mcp login pastel` in their terminal, then restart Codex.

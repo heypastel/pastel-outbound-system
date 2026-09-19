@@ -88,12 +88,15 @@ Pastel's agents then do a first run on your market, which takes **30–45 minute
 
 ### 2. Install it in Codex
 
+You need Codex CLI **0.153 or newer** for GPT-6 Astra (`codex --version`; update with `codex update`).
+
 ```bash
 codex plugin marketplace add heypastel/pastel-outbound-system
 codex plugin add pastel-outbound@pastel-outbound-system
+codex mcp login pastel
 ```
 
-The Pastel connection comes with the plugin. Codex asks you to sign in to Pastel the first time a skill needs it, and tells you if sending isn't enabled on your account yet.
+The last command opens your browser to connect Pastel. Approve it, including the sending permissions, then start Codex and pick **GPT-6 Astra** with `/model`.
 
 <details>
 <summary>Optional: add the 12 agents so research and writing run in parallel</summary>
