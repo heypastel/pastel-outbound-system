@@ -85,6 +85,8 @@ Drop the `skills/` folder where your agent loads skills from, and add `https://m
 2. Link the LinkedIn profile that will do the outreach.
 3. Approve the MCP connection when your agent asks. To let the system **send** (not just draft), grant the `engage`, `sequences`, and `messages` scopes. The system checks your scopes at the start of every session and tells you what's missing.
 
+**New to Pastel?** Its agents do a first run on your market right after setup, which usually takes **30–45 minutes**. Leads appear when it's done. Use that time for step 1 below — the system will tell you if the first run is still going.
+
 Without Pastel, the skills still research and draft, but they have no leads, signals, inbox, or sending.
 
 ## First five minutes

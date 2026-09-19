@@ -25,7 +25,7 @@ Each row answers "what did this person just do?". A matching job title answers a
 4. **Capture the event.** Ranked items include it in `evidence` (`primary_event_type`, `primary_event_at`, `selection_reason`). For other rows, or to read the actual post or comment, call `pastel_get_details` five ids at a time.
 5. Stop at 25 rows unless the user sets a size. Remove only the unmistakable misfits (our own team, competitor staff); fit judgement is `icp-filter`'s job.
 
-Zero results → report zero, then offer one change at a time (persona, country, or signal type), or `target-accounts` to point a Pastel agent at new ground.
+Zero results → run the empty-result check in the house rules; it tells a narrow filter apart from a first run still in progress.
 
 ## Output
 

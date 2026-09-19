@@ -14,7 +14,7 @@ A fifteen-minute outbound routine, prepared in advance. The brief only reads and
 1. **Health:** `pastel_list_connected_accounts` — can we send today? (`pastel_get_crawl_status` shows only crawls running right now; the newest lead dates in step 4 tell you whether agents are producing.)
 2. **Inbox:** `pastel_list_conversations(unread_only=true)`, tagged the `inbox-triage` way; hot conversations lead the brief.
 3. **Stuck:** `pastel_list_sequence_runs(status="needs_attention")`.
-4. **New signals:** `pastel_recommend_best_leads(created_since=<yesterday>, limit=10)`, checked quickly against `icp-context.md`.
+4. **New signals:** `pastel_recommend_best_leads(created_since=<yesterday>, limit=10)`, checked quickly against `icp-context.md`. Nothing new → the empty-result check in the house rules; on a first run, the brief becomes "first run in progress" plus the setup moves to do meanwhile.
 5. **Posts:** `pastel_recommend_best_posts(limit=5)`.
 6. **Choose five moves** by this priority: answer hot → unblock stuck runs → comment on a strong post → first message to a new high-score lead → scheduled follow-up. Draft each with the owning skill, then `de-slop`.
 

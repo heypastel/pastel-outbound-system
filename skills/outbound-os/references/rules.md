@@ -8,10 +8,21 @@
 ## Evidence
 
 - **Everything is sourced.** Each name, title, company fact, signal, email, and reply quote comes from a Pastel result or a public page you can link. Anything you could not source is written `[missing: what]`, and the work continues around it.
-- **Pastel remembers; it does not search.** Results are what the workspace's agents already collected. "No results" means "not collected yet". The fix is upstream — a new or broader Pastel agent via `target-accounts` — so report the empty result and offer that fix.
+- **Pastel remembers; it does not search.** Results are what the workspace's agents already collected. "No results" means "not collected yet" — run the empty-result check below before saying anything else.
 - **Label every number.** A score is either Pastel's Copilot ranking or our own rubric; say which.
 - **Use the right state word:** _drafted_ (text exists), _proposed_ (awaiting the user), _queued_ (Pastel accepted it), _done_ (`pastel_get_sequence_run` shows the step executed). Pastel engagements are asynchronous, so a successful request means _queued_.
 - **Say when outbound is the wrong lever.** A vague offer or an imaginary buyer shows up as silence; name it instead of adding volume.
+
+## Empty-result check
+
+Run this whenever a lead or post read comes back empty, before reporting it:
+
+1. `pastel_aggregate_leads()` with no filters — is the whole workspace empty, or just this query?
+2. **Workspace has leads** → only the filters are too narrow. Report zero for this query and offer to widen one filter, or `target-accounts` to point a Pastel agent at new ground.
+3. **Workspace is empty** → `pastel_get_crawl_status` and `pastel_list_agents`:
+   - `active` is non-empty → **first run in progress.** Tell the user: "Pastel's agents are doing their first run on your market. It usually takes 30–45 minutes; you can start outreach once it's done." Offer what works meanwhile: `icp-context-setup`, `target-accounts`, `account-research` on companies they name, or drafting with `linkedin-copy`. Do not guess leads to fill the gap.
+   - no active run and no agents → Pastel has nothing to watch yet. Point the user to finishing Pastel onboarding (website added, LinkedIn connected), or offer `target-accounts` to create the first agent.
+   - no active run but agents exist → the agents ran and found nothing. Show each agent's filters and offer `target-accounts` to broaden them.
 
 ## Review mode and autopilot
 

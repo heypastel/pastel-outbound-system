@@ -16,5 +16,6 @@ Every outbound skill leans on this file, so each line is either backed by a sour
 3. **Ask for the gaps** in a single message of six questions or fewer. Unless already known, always cover: nameable customers or results, the no-go list, the ask we want, autopilot on or off.
 4. **Save `icp-context.md`** in the location the user prefers (project root by default), `[missing]` where still unknown.
 5. **Point out conflicts** between Pastel's ICP definitions and the user's answers, and offer `target-accounts` to align Pastel.
+6. **Check the workspace** with the empty-result check in the house rules. A new user usually lands here during Pastel's first run — tell them it's running and roughly when to come back.
 
 Finished when the file exists, no line is blank (filled or `[missing]`), and autopilot is explicitly on or off.
