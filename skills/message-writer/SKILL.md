@@ -21,6 +21,7 @@ The Buying Committee seat changes the angle: deciders hear outcomes and cost, us
 
 ## Rules
 
+- Open with the topic, not the surveillance: talk about what the post they engaged with was about ("teams juggling five outbound tools…"), never "I saw your comment" or "you commented DEMO".
 - The ask is small: something they can answer from their phone in one line.
 - The Buying Committee seat, if any, decides the angle (see above).
 - When `why-now` is `thin`, write shorter rather than padding it.

@@ -98,6 +98,8 @@ codex mcp login pastel
 
 The last command opens your browser to connect Pastel. Approve it, including the sending permissions, then start Codex and pick **GPT-6 Astra** with `/model`.
 
+No GPT-6 Astra in your Codex yet? Everything works with any Codex model, such as GPT-5.6 Terra.
+
 <details>
 <summary>Optional: add the 12 agents so research and writing run in parallel</summary>
 
